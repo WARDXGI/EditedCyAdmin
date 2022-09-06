@@ -2623,20 +2623,7 @@ AddCommand(function()
 	notif("ExploiterDetection","Has been set to "..tostring(ExploiterDetectionOn),5,nil)
 end,"exploiterdetection",{},"Detects exploiters (Has a chance to false flag)","[No Args]")
 
-AddCommand(function(Arguments)
-	if Arguments[1] then 
-		if Arguments[1] == "image" then 
-			if Arguments[2] then 
-				CmdBarImageLabel.Image = "http://www.roblox.com/asset/?id="..Arguments[2]
-			end
-		elseif Arguments[1] == "none" then 
-			CmdBarImageLabel.Image = ""
-		elseif Arguments[1] == "default" then
-			CmdBarImageLabel.Image = "http://www.roblox.com/asset/?id="
-		end
-		updateHotkeys(ConfigurationFile)
-	end
-end,"commandbarimage",{"cmdbarimage"},"Changes the command bar image","[Image/None/Default]")
+
 
 AddCommand(function(Arguments)
 	if Arguments[1] then 
@@ -2815,7 +2802,7 @@ coroutine.resume(coroutine.create(function()
 	CmdsScrolling.Active = true
 	CmdsScrolling.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	CmdsScrolling.BackgroundTransparency = 0
-	CmdsScrolling.BorderColor3 = Color3.fromRGB(16,42,220)
+	CmdsScrolling.BorderColor3 = Color3.fromRGB(138,43,226)
 	CmdsScrolling.BorderSizePixel = 0
 	CmdsScrolling.Position = UDim2.new(-0.022,0,-0.02,0)
 	CmdsScrolling.Size = UDim2.new(0,400,0,350)
@@ -2825,27 +2812,26 @@ coroutine.resume(coroutine.create(function()
 	-- Command bar --
 
 	
-	CmdBarFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
-	CmdBarFrame.BackgroundTransparency = 0.8
-	CmdBarFrame.Size = UDim2.new(0,197,0,41)
-	CmdBarFrame.Position = UDim2.new(1.5,0,1.5,0)
+	CmdBarFrame.BackgroundColor3 = Color3.fromRGB(17,17,17)
+	CmdBarFrame.BackgroundTransparency = 0
+	CmdBarFrame.Size = UDim2.new(0,199,0,145)
+	CmdBarFrame.BorderSizePixel = 2
+	CmdBarFrame.BorderColor3 = Color3.fromRGB(138,43,226)
+	CmdBarFrame.Position = UDim2.new(-0.1,0,-0.1,0)
 	CmdBarFrame.AnchorPoint = Vector2.new(0.5,0.5)
 
-	CmdBarTextBox.BackgroundColor3 = Color3.fromRGB(0,0,0)
-	CmdBarTextBox.BackgroundTransparency = 0.4
-	CmdBarTextBox.BorderColor3 = Color3.fromRGB(170,0,0)
+	
+	CmdBarTextBox.BackgroundColor3 = Color3.fromRGB(17,17,17)
+	CmdBarTextBox.BackgroundTransparency = 0
+	CmdBarTextBox.BorderColor3 = Color3.fromRGB(138,43,226)
 	CmdBarTextBox.BorderSizePixel = 2
-	CmdBarTextBox.Position = UDim2.new(0,0,-0.8,0)
+	CmdBarTextBox.Position = UDim2.new(0,0,-0.3,0)
 	CmdBarTextBox.Size = UDim2.new(0,199,0,41)
 	CmdBarTextBox.Font = Enum.Font.SciFi
-	CmdBarTextBox.TextColor3 = Color3.fromRGB(255,255,255)
+	CmdBarTextBox.TextColor3 = Color3.fromRGB(138,43,226)
 	CmdBarTextBox.TextSize = 15
 	CmdBarTextBox.TextWrapped = true
 	CmdBarTextBox.ClearTextOnFocus = true 
-	
-	CmdBarImageLabel.BackgroundColor3 = Color3.fromRGB(0,0,0)
-	CmdBarImageLabel.Size = UDim2.new(0,199,0,145)
-	CmdBarImageLabel.Image = CmdBarImage
 	
 	-- Values GUI -- 
 	
@@ -2924,7 +2910,7 @@ coroutine.resume(coroutine.create(function()
 
 	KeysFrame.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	KeysFrame.BackgroundTransparency = 0
-	KeysFrame.BorderColor3 = Color3.fromRGB(16,42,220)
+	KeysFrame.BorderColor3 = Color3.fromRGB(138,43,226)
 	KeysFrame.BorderSizePixel = 0
 	KeysFrame.Position = UDim2.new(0.5,0,0.5,0)
 	KeysFrame.AnchorPoint = Vector2.new(0.5,0.5)
@@ -2933,57 +2919,57 @@ coroutine.resume(coroutine.create(function()
 
 	AnyCmdButton.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	AnyCmdButton.BackgroundTransparency = 0
-	AnyCmdButton.BorderColor3 = Color3.fromRGB(16,42,220)
+	AnyCmdButton.BorderColor3 = Color3.fromRGB(138,43,226)
 	AnyCmdButton.Position = UDim2.new(0.17,0,0.43,0)
 	AnyCmdButton.Size = UDim2.new(0,49,0,49)
 	AnyCmdButton.Font = Enum.Font.SourceSans
-	AnyCmdButton.TextColor3 = Color3.fromRGB(16,42,220)
+	AnyCmdButton.TextColor3 = Color3.fromRGB(138,43,226)
 	AnyCmdButton.TextSize = 13
 	AnyCmdButton.TextWrapped = true
 	AnyCmdButton.Text = "Type a command then click"
 	
 	KeysLabel.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	KeysLabel.BackgroundTransparency = 0
-	KeysLabel.BorderColor3 = Color3.fromRGB(16,42,220)
+	KeysLabel.BorderColor3 = Color3.fromRGB(138,43,226)
 	KeysLabel.Position = UDim2.new(0.004,0,-0.3,0)
 	KeysLabel.Size = UDim2.new(0,217,0,50)
 	KeysLabel.Font = Enum.Font.SciFi
 	KeysLabel.Text = "Keys GUI"
-	KeysLabel.TextColor3 = Color3.fromRGB(16,42,220)
+	KeysLabel.TextColor3 = Color3.fromRGB(138,43,226)
 	KeysLabel.TextSize = 50
 	
 	CmdBarKeyLabel.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	CmdBarKeyLabel.BackgroundTransparency = 0
-	CmdBarKeyLabel.BorderColor3 = Color3.fromRGB(16,42,220)
+	CmdBarKeyLabel.BorderColor3 = Color3.fromRGB(138,43,226)
 	CmdBarKeyLabel.Position = UDim2.new(0.6,0,0.07,0)
 	CmdBarKeyLabel.Size = UDim2.new(0,50,0,44)
 	CmdBarKeyLabel.Font = Enum.Font.Fantasy
 	CmdBarKeyLabel.Text = "CmdBar Key"
-	CmdBarKeyLabel.TextColor3 = Color3.fromRGB(16,42,220)
+	CmdBarKeyLabel.TextColor3 = Color3.fromRGB(138,43,226)
 	CmdBarKeyLabel.TextSize = 11
 	CmdBarKeyLabel.TextWrapped = true
 	
 	CmdBarKeyButton.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	CmdBarKeyButton.BackgroundTransparency = 0
-	CmdBarKeyButton.BorderColor3 = Color3.fromRGB(16,42,220)
+	CmdBarKeyButton.BorderColor3 = Color3.fromRGB(138,43,226)
 	CmdBarKeyButton.Position = UDim2.new(0.6,0,0.43,0)
 	CmdBarKeyButton.Size = UDim2.new(0,49,0,49)
 	CmdBarKeyButton.Font = Enum.Font.SourceSans
 	CmdBarKeyButton.Text = "Click then press a key"
-	CmdBarKeyButton.TextColor3 = Color3.fromRGB(16,42,220)
+	CmdBarKeyButton.TextColor3 = Color3.fromRGB(138,43,226)
 	CmdBarKeyButton.TextSize = 13
 	CmdBarKeyButton.TextWrapped = true
 	
 	AnyCmdTextBox.BackgroundColor3 = Color3.fromRGB(17,17,17)
 	AnyCmdTextBox.BackgroundTransparency = 0
-	AnyCmdTextBox.BorderColor3 = Color3.fromRGB(16,42,220)
+	AnyCmdTextBox.BorderColor3 = Color3.fromRGB(138,43,226)
 	AnyCmdTextBox.Position = UDim2.new(0.17,0,0.07,0)
 	AnyCmdTextBox.Size = UDim2.new(0,50,0,44)
 	AnyCmdTextBox.Font = Enum.Font.Fantasy
-	AnyCmdTextBox.PlaceholderColor3 = Color3.fromRGB(16,42,220)
+	AnyCmdTextBox.PlaceholderColor3 = Color3.fromRGB(138,43,226)
 	AnyCmdTextBox.PlaceholderText = "CmdToSet"
 	AnyCmdTextBox.Text = ""
-	AnyCmdTextBox.TextColor3 = Color3.fromRGB(16,42,220)
+	AnyCmdTextBox.TextColor3 = Color3.fromRGB(138,43,226)
 	AnyCmdTextBox.TextSize = 11
 	AnyCmdTextBox.TextWrapped = true
 	dragGUI(KeysFrame,KeysFrame)
